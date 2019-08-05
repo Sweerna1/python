@@ -11,8 +11,8 @@ def check_birthdate(y, m, d):
 
 def calculate_age(y, m, d):
     birth_year = int(today.year) - int(y)
-    birth_month = int(today.month) - int(m)
-    birth_day = int(today.day) - int(d)
+    birth_month = abs(int(today.month) - int(m))
+    birth_day = abs(int(today.day) - int(d))
     print("You are " + str(birth_year) + " years, " + str(birth_month) + " months, and " + str(birth_day) + " days")
 
 today = date.today()
